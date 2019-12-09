@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>02-12</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="example">
+            <!-- v-once 는 처음 한 번만 렌더링 수행. 데이터를 변경하여도 다시 렌더링 하지 않음 -->
+            <!-- v-cloak 을 사용하면 화면 초기에 컴파일 되지 않은 템플릿은 나타나지 않도록 할 수 있음. -->
+            <span v-once>{{message}}</span>
+        </div> 
+
+        <script type="text/javascript">
+            
+            var vm = new Vue({
+                el: '#example',
+                data: {
+                    message: "Hello World!"
+                }
+            });
+            
+        </script>
+    </body>
+</html>
